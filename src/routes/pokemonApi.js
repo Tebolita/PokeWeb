@@ -15,7 +15,7 @@ router.post('/buscarPoke', (req, res) => {
                 const bPokemon = JSON.parse(body)
                 request(`https://pokeapi.co/api/v2/pokemon-species/${bPokemon.id}`, (err, response, body) => {
                     const pokemonEspecie = JSON.parse(body)
-                    console.log(pokemonEspecie)
+                    
                     res.render('BPokemon', { bPokemon, pokemonEspecie })
                 })
 
@@ -37,7 +37,7 @@ router.get('/buscarPokeId/:pokeName', (req, res) => {
                 const bPokemon = JSON.parse(body)
                 request(`https://pokeapi.co/api/v2/pokemon-species/${bPokemon.id}`, (err, response, body) => {
                     const pokemonEspecie = JSON.parse(body)
-                    console.log(pokemonEspecie)
+                    
                     res.render('BPokemon', { bPokemon, pokemonEspecie })
                 })
 
