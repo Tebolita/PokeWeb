@@ -1,6 +1,6 @@
 {
   "name": "pagepokemon",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Web que consume la api de pokemon",
   "main": "index.js",
   "scripts": {
