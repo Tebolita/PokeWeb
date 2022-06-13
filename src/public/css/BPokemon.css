@@ -1,0 +1,26 @@
+.table-pokemon{
+    float: left;
+    text-align: center;
+    width: 282px;
+    max-width: 420px;
+    border-radius: 10% ;
+    border: 2px solid black;
+    padding: 2px;
+    border-collapse: collapse;
+}
+
+.info-pokemon {
+    padding: 2px;
+    border-spacing: 3px;
+}
+
+.tipo{
+    font-size: 85%; 
+    line-height:12px; 
+    border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+    -khtml-border-radius: 2px; 
+    -icab-border-radius: 2px; 
+    -o-border-radius: 2px;
+}
