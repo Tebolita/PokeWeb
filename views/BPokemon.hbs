@@ -1,0 +1,182 @@
+<hr>
+{{!--
+<b class="fs-1">Habilidades</b>
+{{#each bPokemon.abilities}}
+<p class="fs-2">{{ ability.name }}</p>
+{{/each}} --}}
+<div width="100%">
+  <div width="25%">
+    <table class="table-pokemon">
+      <tbody>
+        {{!-- Informacion general del pokemon --}}
+        <tr>
+          <td colspan="2">
+            <table width="100%" class="info-pokemon">
+              <tbody>
+                <tr>
+                  <td width="75%">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+                          <td width="50%">
+                            <big>
+                              <big>
+                                <b>{{ bPokemon.name }} </b>
+                              </big>
+                            </big>
+                            <br>
+                            <span>
+                              {{#each pokemonEspecie.genera}}
+                              {{#lenguage language.name "es" }}
+                              {{ genus }}
+                              {{/lenguage}}
+                              {{/each}}
+                            </span>
+                          </td>
+                          <td width="50%">
+                            <span lang="ja">
+                              {{#each pokemonEspecie.names}}
+                              {{#lenguage language.name "ja-Hrkt" }}
+                              {{ name }}
+                              {{/lenguage}}
+                              {{/each}}
+                            </span>
+                            <br>
+                            <i>
+                              {{#each pokemonEspecie.names}}
+                              {{#lenguage language.name "roomaji" }}
+                              {{ name }}
+                              {{/lenguage}}
+                              {{/each}}
+                            </i>
+                          </td>
+                          <th width="25%">
+                            <big>
+                              <big>
+                                <span>#0{{bPokemon.id}}</span>
+                              </big>
+                            </big>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+                          <td colspan="4">
+                            {{#each bPokemon.sprites}}
+                            {{#if home}}
+                            <img src="{{home.front_default}}" alt="{{bPokemon.name}}" decoding="asyc" width="250" ,
+                              height="250">
+                            {{/if}}
+                            {{/each}}
+                            <br>
+                            <small>{{bPokemon.name}}</small>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        {{!-- Aqui va la seccion de tipo --}}
+        <tr>
+          <td style="padding: 2px;">
+            <b>Tipo</b>
+            <table width="100%" style="padding-top: 3px;">
+              <tbody>
+                <tr>
+                  <td>
+                    <table style="margin:auto; background:none;">
+                      <tbody>
+                        <tr>
+                          <td width="30px" cklass="tipo">
+                            <span>
+                              {{#each bPokemon.types}}
+                              <i style="float: right;">{{ type.name }}</i>
+                              {{/each}}
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        {{!-- Habilidades del pokemon --}}
+        <tr>
+          <td colspan="2">
+            <b><span>Habilidades</span></b>
+            <table width="100%">
+              <tbody>
+                <tr>
+                  {{#each bPokemon.abilities}}
+
+                  <td widh="50%">
+                    <span>{{ ability.name }}</span>
+                  </td>
+
+                  {{/each}}
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        {{!-- Stats del pokemon --}}
+        {{!-- <tr>
+          <td colspan="2">
+            <b><span>Estadisticas</span></b>
+            <table width="100%">
+              <tbody>
+                <tr>
+                  {{#each bPokemon.stats}}
+                  <td width="16%" style="background:#9DB7F5; border-right:1px solid black; border-top:1px solid black">
+                    {{base_stat}}
+                    <br>
+                    <small>{{stat.name}}</small>
+                  </td>
+                  {{/each}}
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr> --}}
+      </tbody>
+    </table>
+  </div>
+
+  <div width="75%">
+    <b class="fs-1">
+      {{ bPokemon.name }}
+      {{#each bPokemon.types}}
+      <b style="float: right;">{{ type.name }}</b>
+      {{/each}}
+      <b>(Pókemon)</b>
+
+    </b>
+    <hr>
+
+    <b class="fs-4">Peso: {{ bPokemon.weight }} <br>
+      <b class="fs-4">Experiencia base: {{ bPokemon.base_experience }} </b><br>
+      <b class="fs-4">Altura: {{ bPokemon.height }} </b>
+    </b>
+    <hr>
+    <h1>Estadisticas</h1>
+    {{#each bPokemon.stats}}
+    <b> ->{{stat.name}}: <i>{{base_stat}}</i></b>
+    <br>
+
+    {{/each}}
+  </div>
+
+</div>
